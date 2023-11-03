@@ -1,10 +1,10 @@
 import { connectDB } from "./helper.js";
-import { registerUser, updateUser } from "./controllers/user.js";
+import { registerUser, updateUser, getUser } from "./controllers/user.js";
 
 connectDB();
 
 // let's simulate the functions user would do on twitter
-// 1) user => create account, login, update profile, delete account.
+// 1) user => create account, login, update profile, delete account, getUser data.
 // 2) after logging In => create tweets, deleting tweets, comment on tweets, like tweets, retweet tweets.
 // 3) other functions => follow other_users, unfollow other_users.
 
@@ -16,7 +16,7 @@ const userData = {
   bio: "just a new bio",
   location: "bangalore",
 };
-registerUser(userData);
+// registerUser(userData);
 
 // update user
 const newData = {
@@ -25,5 +25,7 @@ const newData = {
   location: "hyderabad",
   bio: "from hyderabad, phatom troupe",
 };
+// updateUser(newData);
 
-updateUser(newData);
+// getUser Data => userdata, total tweets, following count, follwer count
+getUser("johndoe1@example.com", "password1");

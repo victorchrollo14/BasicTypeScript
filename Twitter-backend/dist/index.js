@@ -4,7 +4,7 @@ const helper_js_1 = require("./helper.js");
 const user_js_1 = require("./controllers/user.js");
 (0, helper_js_1.connectDB)();
 // let's simulate the functions user would do on twitter
-// 1) user => create account, login, update profile, delete account.
+// 1) user => create account, login, update profile, delete account, getUser data.
 // 2) after logging In => create tweets, deleting tweets, comment on tweets, like tweets, retweet tweets.
 // 3) other functions => follow other_users, unfollow other_users.
 // create user
@@ -15,7 +15,7 @@ const userData = {
     bio: "just a new bio",
     location: "bangalore",
 };
-(0, user_js_1.registerUser)(userData);
+// registerUser(userData);
 // update user
 const newData = {
     user_id: 5,
@@ -23,5 +23,7 @@ const newData = {
     location: "hyderabad",
     bio: "from hyderabad, phatom troupe",
 };
-(0, user_js_1.updateUser)(newData);
+// updateUser(newData);
+// getUser Data => userdata, total tweets, following count, follwer count
+(0, user_js_1.getUser)("johndoe1@example.com", "password1");
 //# sourceMappingURL=index.js.map
