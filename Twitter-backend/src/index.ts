@@ -1,5 +1,6 @@
 import { connectDB } from "./helper.js";
 import { registerUser, updateUser, getUser } from "./controllers/user.js";
+import { createTweet, deleteTweet } from "./controllers/tweet.js";
 
 connectDB();
 
@@ -29,3 +30,9 @@ const newData = {
 
 // getUser Data => userdata, total tweets, following count, follwer count
 getUser("johndoe1@example.com", "password1");
+
+// create Tweet
+createTweet(67, "football wa Waku Waku");
+
+// delete tweet
+deleteTweet(25);

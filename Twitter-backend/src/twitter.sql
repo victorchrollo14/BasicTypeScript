@@ -38,8 +38,7 @@ CREATE TABLE likes (
 
 CREATE TABLE retweets (
     retweet_id SERIAL,
-    tweet_id INT,
-    user_id INT,
+    tweet_id INT,   
     quote VARCHAR(280),
     retweet_user_id INT,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
